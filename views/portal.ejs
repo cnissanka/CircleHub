@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>CircleHub Feed</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/stylesheets/feed_style.css">
+  <style>
+    .container{
+      margin-top: 50px;
+    }
+    .card{
+      margin: 15px;
+    }
+    .like_bar{
+      float: right;
+    }
+  </style>
+
+  <script>
+    function increase_like(saying)
+    {
+      likes = parseInt(saying.getElementsByTagName('span')[0].innerHTML);
+      likes+=1;
+      saying.getElementsByTagName('span')[0].innerHTML = likes;
+
+    }
+  </script>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3">
+        <nav class="nav flex-column">
+          <a class="nav-link active" href="#">Say Something</a>
+          <a class="nav-link" href="#">Logout</a>
+        </nav>
+      </div>
+      <div class="col-lg-5">
+        <div class=""></div>
+        <div class="card card-inverse card-primary text-center" ondblclick="increase_like(this)">
+          <div class="card-block">
+            <blockquote class="card-blockquote">
+              <p><a href="#">Codeguy</a> says "Do it today or never do it"</p>
+              <footer class="like_bar"> <span>29</span> Upvotes</footer>
+
+            </blockquote>
+          </div>
+        </div>
+        <div class="card card-inverse card-primary text-center" ondblclick="increase_like(this)">
+          <div class="card-block">
+            <blockquote class="card-blockquote">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                <footer class="like_bar"><span>55</span> Upvotes</footer>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

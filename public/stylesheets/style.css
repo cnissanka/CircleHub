@@ -1,0 +1,25 @@
+@font-face {
+  font-family: trench;
+  src: url('fonts/trench100free.ttf');
+}
+
+a {
+  color: #00B7FF;
+}
+
+body{
+  background-image: url('/images/wall.jpg');
+  background-size: cover;
+}
+
+h2{
+
+  padding: 15px;
+  margin-top: 0px;
+  text-align: center;
+}
+
+.container {
+  margin-top: 20px;
+  width: 900px;
+}
